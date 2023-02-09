@@ -9,7 +9,7 @@ class LoopTasks(commands.Cog):
 
 	def __init__(self, bot):
 		self.bot = bot
-		self.Image, self.Board, self.Settings, self.RankingFormat = loadJson()
+		self.Image, self.Board, self.Settings = loadJson()
 		self.SendGuild = self.Board["SendGuild"]
 		self.SendChannel = self.Board["SendChannel"]
 		self.syncGameActivity.start()
