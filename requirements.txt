@@ -10,3 +10,4 @@ typing_extensions==4.3.0
 yarl==1.7.2
 colorama==0.4.6
 pytz==2022.6
+requests==23.0
