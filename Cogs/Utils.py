@@ -8,7 +8,7 @@ class Utils(commands.Cog):
 
 	def __init__(self, bot):
 		self.bot = bot
-		self.Image, self.Board, self.Settings, self.RankingFormat = loadJson()
+		self.Image, self.Board, self.Settings = loadJson()
 
 	# /도움말
 	@app_commands.command(name="도움말", description="명령어 리스트를 확인합니다.")
