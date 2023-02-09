@@ -80,6 +80,6 @@ async def reload(ctx):
 			await ctx.reply(f"리로드 실패\n`{E}`")
 
 try:
-    client.run(TOKEN)
+    bot.run(TOKEN)
 except discord.errors.LoginFailure as e:
     print("Improper token has been passed.")
