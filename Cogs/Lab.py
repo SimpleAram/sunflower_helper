@@ -1,7 +1,7 @@
 from discord.ext import commands
 from discord import app_commands
 import discord
-from Domisol import *
+from Helper_Sol import *
 
 def getLabSkins(skins: json, Level: int) -> list:
 	# skins와 Level를 필요로 함.
