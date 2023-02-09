@@ -1,7 +1,7 @@
 from discord.ext import commands
 from discord import app_commands
 import discord
-from Domisol import *
+from Helper_Sol import *
 
 
 class Utils(commands.Cog):
@@ -17,9 +17,8 @@ class Utils(commands.Cog):
 		embed.add_field(
 		 name="명령어 리스트",
 		 value=
-		 '- `/채널` : 실시간 채널 리스트를 확인합니다.\n- `/랭킹` : 실시간 랭킹을 확인합니다.\n- `/링크` : 좀비고등학교의 온라인 커뮤니티를 확인합니다.\n- `/연구실` : 연구실 시뮬레이션',
+		 '- `/링크` : 좀비고등학교의 온라인 커뮤니티를 확인합니다.\n- `/연구실` : 연구실 시뮬레이션\n- `/어썸팩` : 어썸팩 시뮬레이션',
 		 inline=False)
-		# embed.add_field(name="명령어 리스트", value= '- `/채널` : 실시간 채널 리스트를 확인합니다.\n- `/랭킹` : 실시간 랭킹을 확인합니다.\n- `/링크` : 좀비고등학교의 온라인 커뮤니티를 확인합니다.\n- `/연구실` : 연구실 시뮬레이션\n- `/어썸팩` : 어썸팩 시뮬레이션', inline=False)
 		await interaction.response.send_message(embed=embed, ephemeral=True)
 
 	# /링크
