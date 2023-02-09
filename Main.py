@@ -82,4 +82,4 @@ async def reload(ctx):
 try:
     bot.run(TOKEN)
 except discord.errors.LoginFailure as e:
-    print("Improper token has been passed.")
+    print("토큰이 잘못되었습니다.")
