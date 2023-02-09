@@ -34,7 +34,7 @@ class LoopTasks(commands.Cog):
 		await self.bot.change_presence(status=discord.Status.online,
 		                               activity=activity)
 
-	@tasks.loop(seconds=10)
+	@tasks.loop(seconds=5)
 	async def loadingBoards(self):
 		Boards = lastBoards(self.Board)
 		Notice = Boards[0]
