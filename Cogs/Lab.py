@@ -35,7 +35,7 @@ class Lab(commands.Cog):
 
 	def __init__(self, bot):
 		self.bot = bot
-		self.Image, self.Board, self.Settings, self.RankingFormat = loadJson()
+		self.Image, self.Board, self.Settings = loadJson()
 		self.LabFormat = json.loads(open("LabFormat.json", "r", encoding="UTF-8").read())
 
 	# /연구실
