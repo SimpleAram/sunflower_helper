@@ -1,7 +1,7 @@
 from discord.ext import commands
 from discord import app_commands
 import discord
-from Domisol import *
+from Helper_Sol import *
 
 
 def awesomepackRarity(user: str, rarity: str, skin: str, _: int):
