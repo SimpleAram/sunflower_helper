@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import discord
 from discord.ext import commands, tasks
-from Domisol import *
+from Helper_Sol import *
 from cmath import log
 from dotenv import load_dotenv
 import os
