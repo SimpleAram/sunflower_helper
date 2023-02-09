@@ -1,7 +1,7 @@
 from discord.ext import commands, tasks
 import discord
 import requests
-from Domisol import *
+from Helper_Sol import *
 import urllib
 
 
@@ -15,18 +15,18 @@ class LoopTasks(commands.Cog):
 		self.syncGameActivity.start()
 		self.loadingBoards.start()
 
-	@tasks.loop(seconds=60)
-	async def syncGameActivity(self):
-		channel_url = requests.get(
-		 "https://zh-kr-g-web.awesomepiece.com/api/server-list?version={0}")
+# 	@tasks.loop(seconds=10)
+# 	async def syncGameActivity(self):
+# 		channel_url = requests.get(
+# 		 "https://zh-kr-g-web.awesomepiece.com/api/server-list?version={0}")
 
-		allUserCount = 0
-		for i in channel_url.json():
-			allUserCount += i['userCount']
+# 		allUserCount = 0
+# 		for i in channel_url.json():
+# 			allUserCount += i['userCount']
 
-		activity = discord.Game(f"{format(allUserCount, ',d')} 명과 함께 좀비고")
-		await self.bot.change_presence(status=discord.Status.online,
-		                               activity=activity)
+# 		activity = discord.Game(f"{format(allUserCount, ',d')} 명과 함께 좀비고")
+# 		await self.bot.change_presence(status=discord.Status.online,
+# 		                               activity=activity)
 
 	@tasks.loop(seconds=10)
 	async def loadingBoards(self):
