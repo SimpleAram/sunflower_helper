@@ -15,16 +15,22 @@ class LoopTasks(commands.Cog):
 		self.syncGameActivity.start()
 		self.loadingBoards.start()
 
-	@tasks.loop(seconds=60)
+# 	@tasks.loop(seconds=60)
+# 	async def syncGameActivity(self):
+# 		channel_url = requests.get(
+# 		 "https://zh-kr-g-web.awesomepiece.com/api/server-list?version={0}")
+
+# 		allUserCount = 0
+# 		for i in channel_url.json():
+# 			allUserCount += i['userCount']
+
+# 		activity = discord.Game(f"{format(allUserCount, ',d')} 명과 함께 좀비고")
+# 		await self.bot.change_presence(status=discord.Status.online,
+# 		                               activity=activity)
+
+@tasks.loop(seconds=300)
 	async def syncGameActivity(self):
-		channel_url = requests.get(
-		 "https://zh-kr-g-web.awesomepiece.com/api/server-list?version={0}")
-
-		allUserCount = 0
-		for i in channel_url.json():
-			allUserCount += i['userCount']
-
-		activity = discord.Game(f"{format(allUserCount, ',d')} 명과 함께 좀비고")
+		activity = discord.Activity(type=discord.ActivityType.watching, name="해바라기")
 		await self.bot.change_presence(status=discord.Status.online,
 		                               activity=activity)
 
