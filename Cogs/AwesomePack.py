@@ -74,7 +74,7 @@ class AwesomePack(commands.Cog):
 
 	def __init__(self, bot):
 		self.bot = bot
-		self.Image, self.Board, self.Settings, self.RankingFormat = loadJson()
+		self.Image, self.Board, self.Settings = loadJson()
 		self.NormalSkins = json.loads(
 		 open("AwesomePack.json", "r", encoding="UTF-8").read())["Normal"]
 		self.ElfSkins = json.loads(
