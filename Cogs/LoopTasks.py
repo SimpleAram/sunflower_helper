@@ -28,11 +28,11 @@ class LoopTasks(commands.Cog):
 		await self.bot.change_presence(status=discord.Status.online,
 		                               activity=activity)
 
-	@tasks.loop(seconds=300)
-	async def syncGameActivity(self):
-		activity = discord.Activity(type=discord.ActivityType.watching, name="해바라기")
-		await self.bot.change_presence(status=discord.Status.online,
-		                               activity=activity)
+# 	@tasks.loop(seconds=300)
+# 	async def syncGameActivity(self):
+# 		activity = discord.Activity(type=discord.ActivityType.watching, name="해바라기")
+# 		await self.bot.change_presence(status=discord.Status.online,
+# 		                               activity=activity)
 
 	@tasks.loop(seconds=5)
 	async def loadingBoards(self):
